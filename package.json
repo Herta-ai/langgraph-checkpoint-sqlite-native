@@ -1,7 +1,7 @@
 {
   "name": "langgraph-checkpoint-sqlite-native",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "LangGraph Checkpoint saver using native SQLite for Node.js and Bun.",
   "keywords": [
     "langgraph",
@@ -33,12 +33,13 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
-    "test:nodejs": "vitest ./tests/nodejs.test.ts",
-    "test:bun": "bun run --bun vitest ./tests/bun.test.ts",
+    "test:nodejs": "vitest run ./tests/nodejs.test.ts",
+    "test:bun": "bun run --bun vitest run ./tests/bun.test.ts",
     "test:deno": "deno task test:nodejs",
+    "test": "npm run test:nodejs && npm run test:bun && npm run test:deno",
     "typecheck": "tsc --noEmit",
     "release": "bumpp",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "bun run build"
   },
   "peerDependencies": {
     "@langchain/core": "^1.1.44",
