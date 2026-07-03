@@ -1,0 +1,51 @@
+{
+  "name": "langgraph-checkpoint-sqlite-native",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "A starter for creating a TypeScript package.",
+  "author": "Wyatex <wyatex@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/herta-ai/langgraph-checkpoint-sqlite-native#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herta-ai/langgraph-checkpoint-sqlite-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/herta-ai/langgraph-checkpoint-sqlite-native/issues"
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./bun": "./dist/bun.mjs",
+    "./nodejs": "./dist/nodejs.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test:nodejs": "vitest ./tests/nodejs.test.ts",
+    "test:bun": "bun run --bun vitest ./tests/bun.test.ts",
+    "test:deno": "deno task test:nodejs",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "@langchain/core": "^1.1.44",
+    "@langchain/langgraph-checkpoint": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "@typescript/native-preview": "7.0.0-dev.20260509.2",
+    "bumpp": "^11.1.0",
+    "tsdown": "^0.22.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  },
+  "dependencies": {
+    "@types/bun": "^1.3.14",
+    "@types/deno": "^2.7.0"
+  }
+}
