@@ -2,7 +2,15 @@
   "name": "langgraph-checkpoint-sqlite-native",
   "type": "module",
   "version": "0.0.1",
-  "description": "A starter for creating a TypeScript package.",
+  "description": "LangGraph Checkpoint saver using native SQLite for Node.js and Bun.",
+  "keywords": [
+    "langgraph",
+    "checkpoint",
+    "sqlite",
+    "bun",
+    "nodejs",
+    "langchain"
+  ],
   "author": "Wyatex <wyatex@qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/herta-ai/langgraph-checkpoint-sqlite-native#readme",
