@@ -92,9 +92,9 @@ export class SqliteSaver extends BaseCheckpointSaver {
 
   protected isSetup: boolean;
 
-  protected withoutCheckpoint: Statement;
+  protected withoutCheckpoint: StatementSync;
 
-  protected withCheckpoint: Statement;
+  protected withCheckpoint: StatementSync;
 
   constructor(db: DatabaseSync, serde?: SerializerProtocol) {
     super(serde);
@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS writes (
     if (checkpoint_id) args.push(checkpoint_id);
 
     const stm = checkpoint_id ? this.withCheckpoint : this.withoutCheckpoint;
-    const row = stm.get(...args) as CheckpointRow;
+    const row = stm.get(...args) as CheckpointRow | undefined;
     if (row === undefined) return undefined;
 
     let finalConfig = config;
@@ -320,7 +320,7 @@ CREATE TABLE IF NOT EXISTS writes (
 
     const rows: CheckpointRow[] = this.db
       .prepare(sql)
-      .all(...args) as CheckpointRow[];
+      .all(...args) as unknown as CheckpointRow[];
 
     if (rows) {
       for (const row of rows) {
