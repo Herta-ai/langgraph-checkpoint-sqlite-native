@@ -96,6 +96,12 @@ const graph = new StateGraph({
 const app = graph.compile({ checkpointer: saver });
 ```
 
+#### 🌐 Real-world Projects
+
+> 🤖 **[Herta-chat-baseline](https://github.com/Herta-ai/herta-chat-baseline)**
+> 
+> An advanced AI chat baseline built with LangChain.js. Demonstrates how to properly integrate this native SQLite checkpointer for production-ready state persistence.
+
 ---
 
 <h2 id="中文">📖 中文文档</h2>
@@ -157,3 +163,9 @@ const graph = new StateGraph({
 // 3. 携带 checkpointer 编译图
 const app = graph.compile({ checkpointer: saver });
 ```
+
+#### 🌐 真实项目案例
+
+> 🤖 **[Herta-chat-baseline](https://github.com/Herta-ai/herta-chat-baseline)**
+> 
+> 一个基于 LangChain.js 构建的 AI 聊天基线项目。它展示了如何优雅地使用此原生 SQLite Checkpointer 来实现生产级别的状态持久化。
