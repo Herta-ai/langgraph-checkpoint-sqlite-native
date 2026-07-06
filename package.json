@@ -1,7 +1,7 @@
 {
   "name": "langgraph-checkpoint-sqlite-native",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "LangGraph Checkpoint saver using native SQLite for Node.js and Bun.",
   "keywords": [
     "langgraph",
