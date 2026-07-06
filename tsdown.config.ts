@@ -5,6 +5,5 @@ export default defineConfig({
     tsgo: true,
   },
   exports: true,
-  entry: ['src/index.ts', 'src/bun.ts', 'src/nodejs.ts'],
-  // ...config options
+  entry: ['src/bun.ts', 'src/nodejs.ts'],
 })

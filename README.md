@@ -58,24 +58,16 @@ The library provides specific classes optimized for your runtime.
 
 #### Node.js & Deno
 ```typescript
-import { NodejsSqliteSaver } from "langgraph-checkpoint-sqlite-native";
-// Alternatively, import specifically for Node.js (or Deno):
-// import { SqliteSaver } from "langgraph-checkpoint-sqlite-native/nodejs";
+import { SqliteSaver } from "langgraph-checkpoint-sqlite-native/nodejs";
 
-const saver = NodejsSqliteSaver.fromConnString(":memory:"); // Or path to a file like "database.sqlite"
-// If using the specific import:
-// const saver = SqliteSaver.fromConnString(":memory:");
+const saver = SqliteSaver.fromConnString(":memory:");
 ```
 
 #### Bun
 ```typescript
-import { BunSqliteSaver } from "langgraph-checkpoint-sqlite-native";
-// Alternatively, import specifically for Bun:
-// import { SqliteSaver } from "langgraph-checkpoint-sqlite-native/bun";
+import { SqliteSaver } from "langgraph-checkpoint-sqlite-native/bun";
 
-const saver = BunSqliteSaver.fromConnString(":memory:");
-// If using the specific import:
-// const saver = SqliteSaver.fromConnString(":memory:");
+const saver = SqliteSaver.fromConnString(":memory:");
 ```
 
 #### 🛠️ Complete Example with LangGraph
@@ -128,24 +120,16 @@ pnpm add langgraph-checkpoint-sqlite-native
 
 #### Node.js & Deno
 ```typescript
-import { NodejsSqliteSaver } from "langgraph-checkpoint-sqlite-native";
-// 或者您也可以直接引入特定运行时的版本（Deno 同 Node.js）：
-// import { SqliteSaver } from "langgraph-checkpoint-sqlite-native/nodejs";
+import { SqliteSaver } from "langgraph-checkpoint-sqlite-native/nodejs";
 
-const saver = NodejsSqliteSaver.fromConnString(":memory:"); // 也可以指定文件路径，例如 "database.sqlite"
-// 如果使用特定运行时的引入方式：
-// const saver = SqliteSaver.fromConnString(":memory:");
+const saver = SqliteSaver.fromConnString(":memory:");
 ```
 
 #### Bun
 ```typescript
-import { BunSqliteSaver } from "langgraph-checkpoint-sqlite-native";
-// 或者您也可以直接引入 Bun 的专属版本：
-// import { SqliteSaver } from "langgraph-checkpoint-sqlite-native/bun";
+import { SqliteSaver } from "langgraph-checkpoint-sqlite-native/bun";
 
-const saver = BunSqliteSaver.fromConnString(":memory:");
-// 如果使用特定运行时的引入方式：
-// const saver = SqliteSaver.fromConnString(":memory:");
+const saver = SqliteSaver.fromConnString(":memory:");
 ```
 
 #### 🛠️ 配合 LangGraph 使用的完整示例
